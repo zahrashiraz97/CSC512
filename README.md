@@ -110,9 +110,8 @@ int main() {
 
 ## Development and Submission Repositories
 
-- **Development Repository URL**: [Insert Development Repo URL Here]
-- **Submission Repository URL**: [Insert Submission Repo URL Here]
-
+- **Development Repository URL**: https://github.com/zahrashiraz97/CSC512.git
+- **Submission Repository URL**: https://github.com/zahrashiraz97/CSC512.git
 ## Further Development
 
 - For **Milestone 2**, continue working on extending input feature detection for more complex cases (e.g., file input, deeper def-use chain analysis).
