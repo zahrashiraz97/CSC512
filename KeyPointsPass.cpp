@@ -2,6 +2,7 @@
 #include "llvm/IR/Instructions.h"
 #include "llvm/Pass.h"
 #include "llvm/Support/raw_ostream.h"
+#include <fstream>
 
 using namespace llvm;
 
@@ -10,31 +11,45 @@ namespace {
     static char ID;
     KeyPointsPass() : FunctionPass(ID) {}
 
-    // Main run function
     bool runOnFunction(Function &F) override {
-      errs() << "Analyzing function: " << F.getName() << "\n";
-      
+      std::ofstream outfile("KeyPointsTrace.txt", std::ios_base::app);
+      outfile << "Analyzing function: " << F.getName().str() << "\n";
+
       for (auto &B : F) {  // Loop through each basic block in the function
         for (auto &I : B) { // Loop through each instruction in the block
           
           // Identify branching instructions
           if (BranchInst *BI = dyn_cast<BranchInst>(&I)) {
             if (BI->isConditional()) {
-              errs() << "Conditional Branch at Line: " << BI->getDebugLoc().getLine() << "\n";
+              if (I.getDebugLoc()) { // Ensure debug information is available
+                outfile << "Branch (Conditional) at br_" << BI->getDebugLoc().getLine()
+                        << ": File " << I.getDebugLoc()->getFilename().str()
+                        << ", Line " << BI->getDebugLoc().getLine() << "\n";
+              } else {
+                outfile << "Branch (Conditional) at unknown location\n";
+              }
+            } else {
+              outfile << "Unconditional Branch in function: " << F.getName().str() << "\n";
             }
           }
-          
+
           // Identify function pointer calls
           if (CallInst *CI = dyn_cast<CallInst>(&I)) {
             if (Function *calledFunction = CI->getCalledFunction()) {
-              errs() << "Direct call to function: " << calledFunction->getName() << "\n";
+              outfile << "Direct call to function: " << calledFunction->getName().str() << "\n";
             } else {
-              errs() << "Function pointer call detected\n";
+              if (I.getDebugLoc()) {
+                outfile << "Function pointer call at line: " << I.getDebugLoc().getLine()
+                        << " in File " << I.getDebugLoc()->getFilename().str() << "\n";
+              } else {
+                outfile << "Function pointer call at unknown location\n";
+              }
             }
           }
         }
       }
-      
+
+      outfile.close();
       return false;
     }
   };

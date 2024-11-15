@@ -3,6 +3,7 @@
 #include "llvm/IR/PassManager.h"
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Analysis/CFG.h"
+#include <fstream>
 
 using namespace llvm;
 
@@ -12,22 +13,24 @@ namespace {
     SeminalInputPass() : FunctionPass(ID) {}
 
     bool runOnFunction(Function &F) override {
-      errs() << "Analyzing function: " << F.getName() << "\n";
+      std::ofstream outfile("SeminalInputFeatures.txt", std::ios_base::app);
+      outfile << "Analyzing function for seminal input features: " << F.getName().str() << "\n";
 
       for (auto &B : F) {
         for (auto &I : B) {
-          // Identify the instructions involving input (e.g., scanf, getc)
+          // Identify input instructions (e.g., scanf, getc, fgets)
           if (CallInst *CI = dyn_cast<CallInst>(&I)) {
             if (Function *calledFunction = CI->getCalledFunction()) {
               StringRef functionName = calledFunction->getName();
               
-              if (functionName == "scanf" || functionName == "fscanf" || functionName == "getc") {
-                errs() << "Input function call detected: " << functionName << " at line " 
-                       << I.getDebugLoc().getLine() << "\n";
-                // Now trace the def-use chain from here to key points
+              if (isInputFunction(functionName)) {
+                outfile << "Input function detected: " << functionName.str() 
+                        << " at line " << I.getDebugLoc().getLine() << "\n";
+
+                // Track influence from this input instruction
                 for (auto user : I.users()) {
                   if (Instruction *useInst = dyn_cast<Instruction>(user)) {
-                    errs() << "Used in: " << *useInst << "\n";
+                    trackInfluence(useInst, outfile);
                   }
                 }
               }
@@ -35,7 +38,44 @@ namespace {
           }
         }
       }
+      outfile.close();
       return false;
+    }
+
+    bool isInputFunction(StringRef functionName) {
+      return functionName == "scanf" || functionName == "fscanf" || functionName == "getc" || 
+             functionName == "fgets" || functionName == "fread";
+    }
+
+    void trackInfluence(Instruction *inst, std::ofstream &outfile, int depth = 0) {
+      // Limit recursion depth to avoid infinite loops in complex graphs
+      if (depth > 10) return;
+
+      // Check if this instruction influences branching or function pointers
+      if (auto *branchInst = dyn_cast<BranchInst>(inst)) {
+        if (branchInst->isConditional()) {
+          outfile << "  Input variable affects conditional branch at line " 
+                  << branchInst->getDebugLoc().getLine() << "\n";
+        }
+      } else if (auto *callInst = dyn_cast<CallInst>(inst)) {
+        if (!callInst->getCalledFunction()) {
+          outfile << "  Input variable affects function pointer call at line " 
+                  << callInst->getDebugLoc().getLine() << "\n";
+        }
+      }
+
+      // Log variable details
+      if (inst->hasName()) {
+        outfile << "  Tracing variable: " << inst->getName().str() 
+                << " in instruction at line " << inst->getDebugLoc().getLine() << "\n";
+      }
+
+      // Recursively track influence on further dependent instructions
+      for (auto *user : inst->users()) {
+        if (Instruction *userInst = dyn_cast<Instruction>(user)) {
+          trackInfluence(userInst, outfile, depth + 1);
+        }
+      }
     }
   };
 }
