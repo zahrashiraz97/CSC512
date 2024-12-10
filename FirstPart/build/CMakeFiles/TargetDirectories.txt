@@ -1,9 +1,0 @@
-/home/zshiraz/CSC512/FirstPart/build/CMakeFiles/intrinsics_gen.dir
-/home/zshiraz/CSC512/FirstPart/build/CMakeFiles/omp_gen.dir
-/home/zshiraz/CSC512/FirstPart/build/CMakeFiles/acc_gen.dir
-/home/zshiraz/CSC512/FirstPart/build/CMakeFiles/RISCVTargetParserTableGen.dir
-/home/zshiraz/CSC512/FirstPart/build/CMakeFiles/edit_cache.dir
-/home/zshiraz/CSC512/FirstPart/build/CMakeFiles/rebuild_cache.dir
-/home/zshiraz/CSC512/FirstPart/build/BranchPointerPass/CMakeFiles/BranchPointerPass.dir
-/home/zshiraz/CSC512/FirstPart/build/BranchPointerPass/CMakeFiles/edit_cache.dir
-/home/zshiraz/CSC512/FirstPart/build/BranchPointerPass/CMakeFiles/rebuild_cache.dir
