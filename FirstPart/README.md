@@ -1,260 +1,127 @@
-# Part 1 Key Points Detection LLVM Pass & Valgrind Instruction Count Tool
+# Detection of Seminal Input Features in C Programs Using LLVM
 
-- [Part 1 Key Points Detection LLVM Pass \& Valgrind Instruction Count Tool](#part-1-key-points-detection-llvm-pass--valgrind-instruction-count-tool)
-  - [General Project Submission Info](#general-project-submission-info)
-    - [Project Submission](#project-submission)
-    - [GitHub Links](#github-links)
-  - [Overview](#overview)
-  - [Project Structure](#project-structure)
-  - [Prerequisites](#prerequisites)
-    - [3rd party libraries](#3rd-party-libraries)
-  - [Build the Pass](#build-the-pass)
-  - [Running the Pass](#running-the-pass)
-  - [Output](#output)
-  - [Technical Details](#technical-details)
-    - [optimization flags](#optimization-flags)
-  - [Test C programs](#test-c-programs)
-  - [Valgrind instruction count](#valgrind-instruction-count)
-    - [Building](#building)
-    - [Usage](#usage)
-    - [Output](#output-1)
+## Objective
 
-## General Project Submission Info
+The main objective of this project is to create a static analysis tool utilizing LLVM to identify seminal input features within C programs. These features are critical parts of the input that significantly affect the program's behavior at essential execution points.
 
-<!-- https://gist.github.com/tddschn/7c81e97b3aa088a999cb1d06639d222c -->
+## Conceptual Framework
 
-<details>
-<summary>Click to expand</summary>
+Our strategy for addressing the detection of seminal input features in C programs comprises the following key steps:
 
-### Project Submission 
+1. **Development of a Comprehensive Def-Use Chain**: We aim to create a system that effectively tracks the definition and usage relationships of variables across the program. This tracking is vital for understanding the interactions between different variables and the program's overall execution flow. We will represent these relationships using an adjacency list constructed with a hashmap.
 
-Authors:
+2. **Detection of Loop Termination Variables**: Our analysis will focus on identifying the specific variables that control the termination of loops by examining the conditions that dictate loop execution and the variables influencing these conditions.
 
-- Teddy Xinyuan Chen (xchen87, [github.com/tddschn](https://github.com/tddschn)) - Part 1 & 3
-- Haojie Zhou (hzhou33) - Part 2
+3. **Exploration of Calling Relationships in Global Functions**: We will analyze the global context to uncover the calling relationships between user input variables and other program variables, which is essential for linking user inputs to their effects on program behavior.
 
+4. **Correlation of IO Variables with Loop Termination Variables**: By employing a hashmap, we will match which input/output variable governs the loop termination variable, establishing a connection between user inputs and critical program execution points.
 
-### GitHub Links
-
-<!-- The repositories are all private, please email [xchen87@ncsu.edu](mailto:xchen87@ncsu.edu) to request for access. -->
-
-- [https://github.com/ncsu-csc512-project/part1-dev](https://github.com/ncsu-csc512-project/part1-dev/)
-- [https://github.com/ncsu-csc512-project/part1-submission](https://github.com/ncsu-csc512-project/part1-submission)
-- [https://github.com/ncsu-csc512-project/part2-dev](https://github.com/ncsu-csc512-project/part2-dev)
-- [https://github.com/ncsu-csc512-project/part2-submission](https://github.com/ncsu-csc512-project/part2-submission)
-- [https://github.com/ncsu-csc512-project/part3-dev](https://github.com/ncsu-csc512-project/part3-dev)
-- [https://github.com/ncsu-csc512-project/part3-submission](https://github.com/ncsu-csc512-project/part3-submission)
-
-<!-- Two important rules:
-
-Make sure you have an empty line after the closing </summary> tag, otherwise the markdown/code blocks won't show correctly.
-Make sure you have an empty line after the closing </details> tag if you have multiple collapsible sections. -->
-</details>
-
-## Overview
-This README outlines the steps to compile and build the LLVM pass for branch and pointer profiling on UNIX systems.
-
-Learn more [here](./objective.md).
-
-## Project Structure
-
-```
-.
-├── tests                      # C programs for testing the pass
-├── branch                     # valgrind directory
-│  └── br_main.c               # custom valgrind tool to count instructions
-├── scripts
-│  ├── setup-vcpkg.sh          # install vcpkg and nlohmann-json
-│  ├── ubuntu-install-llvm.sh  # install LLVM 17 on Ubuntu
-│  └── valgrind-instruction-count-demo.sh
-│── valgrind-extra
-│  ├── configure.ac            # copy to valgrind root dir to build the `branch` tool
-│  └── Makefile.am
-├── BranchPointerPass
-│  ├── BranchPointerPass.cpp   # LLVM pass code for key points detection
-│  └── CMakeLists.txt
-├── build                      # build directory
-├── CMakeLists.txt
-├── inputs
-│  └── input.c                 # trivial c program for testing LLVM pass
-├── Makefile
-├── objective.md
-└── README.md
-
-```
-
-> [!NOTE]
-> Things to lookout for when running the pass:
-> - Make sure [nlohmann-json](https://github.com/nlohmann/json) is installed
-> - Make sure the LLVM include dir and [nlohmann-json](https://github.com/nlohmann/json) include dir are included in `BranchPointerPass/CMakeLists.txt`
-> - **If on Ubuntu, running `make || make` will set up everything for you**, including installation of LLVM 17, vcpkg, and nlohmann-json. `make` will invoke a few scripts to install these dependencies and build the pass. You may be asked to press <kbd>Enter</kbd> to accept LLVM's license agreement. Read [`Makefile`](./Makefile) for more details.
-> - If you see this error `CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.` when running `make`, please re-run the command - sometimes it takes a few tries to get it to work.
-
+5. **Reporting Target Variables and Corresponding Line Numbers**: In the final step, we will produce a clear output highlighting the identified seminal input features, specifically the target variable along with its line number in the source code.
 
 ## Prerequisites
-> [!IMPORTANT]
-> Please use a **clean** VCL VM to follow through, otherwise you might get weird errors here or there, because of LLVM versions / installation method / installation locations / etc.
 
-> [!TIP]
-> If on Ubuntu, just run `make prereq` to install everything automatically (you may be asked to press <kbd>Enter</kbd> to accept LLVM's license agreement). Read [`Makefile`](./Makefile) for more details.
-- LLVM >= 16.0 installed (`./scripts/ubuntu-install-llvm.sh`)
+> **Important:**  
+> It is recommended to use a **clean** VCL VM for this setup to avoid potential issues stemming from LLVM version discrepancies or installation methods.
+
+> **Tip:**  
+> If you are using Ubuntu, you can automatically install the required components by running `make prereq` (you may need to press <kbd>Enter</kbd> to accept the LLVM license agreement). For further details, consult the [`Makefile`](./Makefile).
+
+- LLVM version 16.0 or later installed (`./scripts/ubuntu-llvm.sh`)
 - CMake installed (`sudo apt install cmake -y`)
-- C++ compiler (e.g., g++, clang)
+- A C++ compiler (e.g., g++, clang)
 
-### 3rd party libraries
+### Third-party Libraries
 
-install these libraries and include your include paths on your system to `BranchPointerPass/CMakeLists.txt`:
+Please install the following libraries and update your include paths in `BranchPointerPass/CMakeLists.txt`:
 
 - [nlohmann-json](https://github.com/nlohmann/json)
 
+## Building the Pass
 
-
-
-
-## Build the Pass
-
-Clone the repo first if you haven't already:
-```bash
-git clone https://github.com/ncsu-csc512-project/part1-dev.git
-```
-
-Navigate to the root directory of the repo and run the following commands to build the pass:
+If you haven't already, begin by cloning the repository:
 
 ```bash
-# export LLVM_DIR=/usr/local/Cellar/llvm/17.0.2 # replace with your LLVM installation directory
-# 
-# mkdir build
-# 
-# # builds ./build/BranchPointerPass/libBranchPointerPass.so
-# cmake -DMY_LLVM_INSTALL_DIR=$LLVM_DIR -S . -B build && cmake --build build
-make build
-# you can specify the LLVM installation directory and clang and opt commands as follows:
-# make LLVM_DIR=/usr/lib/llvm-17 CLANG_COMMAND=/usr/bin/clang-17 OPT_COMMAND=/usr/bin/opt-17 build
+git clone https://github.com/ncsu-csc512-project/part2-submission.git
 ```
 
-## Running the Pass
+Next, navigate to the root directory of the repository and execute the following commands to build the pass:
 
-After building, you should have a `libBranchPointerPass.so` file in your `build` directory. To run the pass, use LLVM's `opt` tool as follows:
 ```bash
-# opt -load-pass-plugin ./build/BranchPointerPass/libBranchPointerPass.so -passes=branch-pointer-pass -disable-output inputs/input.ll
-make run
-# you can specify the LLVM installation directory and clang and opt commands as follows:
-# make LLVM_DIR=/usr/lib/llvm-17 CLANG_COMMAND=/usr/bin/clang-17 OPT_COMMAND=/usr/bin/opt-17
+mkdir build
+cd build
+cmake ..
+make
 ```
 
-Replace `input.ll` with the LLVM IR file you want to analyze.
+### Running the tests
 
-## Output
+```bash
+clang  -g -O0 -emit-llvm -c test_example1.c -o test_example1.bc
+llvm-dis test_example1.bc -o test_example1.ll
+opt -load-pass-plugin ../build/libDefUseAnalysisPass.so -passes=def-use-analysis -disable-output test_example1.bc
+
+clang  -g -O0 -emit-llvm -c hash_blake2b.c -o hash_blake2b.bc
+llvm-dis hash_blake2b.bc -o hash_blake2b.ll
+opt -load-pass-plugin ../build/libDefUseAnalysisPass.so -passes=def-use-analysis -disable-output hash_blake2b.bc
 
 
-```
-$ make
 
--- Configuring done (0.2s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/tscp/testdir/csc512-proj/part1-dev/build
-gmake[1]: Entering directory '/Users/tscp/testdir/csc512-proj/part1-dev/build'
-[100%] Built target BranchPointerPass
-gmake[1]: Leaving directory '/Users/tscp/testdir/csc512-proj/part1-dev/build'
-opt -load-pass-plugin ./build/BranchPointerPass/libBranchPointerPass.so -passes=branch-pointer-pass -disable-output inputs/input.ll
-*funcptr_0x6000008d8380
-br_1: /Users/tscp/testdir/csc512-proj/part1-dev/inputs/input.c, 12, 13
-br_2: /Users/tscp/testdir/csc512-proj/part1-dev/inputs/input.c, 13, 13
-br_3: /Users/tscp/testdir/csc512-proj/part1-dev/inputs/input.c, 13, 14
+./run_tests.sh
 ```
 
-`dict.json` file generated when running the pass for storing the branching info:
+### Example tests
+1. Example 1
+```bash
+#include <stdio.h>
+int main(){
+   int id;
+   int n;
+   scanf("%d", &n);
+   int s = 0;
+   id = n;
+   for (int i = 0; i < id; i++){
+      s += 1;
+   }
+   printf("id=%d; sum=%d\n", id, n);
+}
 
-```json
-[
-    {
-        "branch_id": 1,
-        "dest_lno": 21,
-        "filename": "inputs/input.c",
-        "src_lno": 19
-    },
-    {
-        "branch_id": 2,
-        "dest_lno": 23,
-        "filename": "inputs/input.c",
-        "src_lno": 21
+```
+
+2. Example 2
+
+```bash
+#include <stdio.h>
+
+int main() {
+    char str1[1000]; 
+    FILE *fp = fopen("file.txt", "r"); 
+    char c;
+    int len = 0;
+    if (fp == NULL) {
+        printf("Failed to open file\n");
+        return 1;
     }
-]
+    while (1) {
+        c = getc(fp);
+        if (c == EOF || len >= 999) break;
+        str1[len++] = c;
+    }
+    str1[len] = '\0'; 
+    printf("%s\n", str1);
+    fclose(fp); 
+    return 0;
+}
 ```
 
-## Technical Details
-
-### optimization flags
-
-I tested the pass on .ll files generated by clang with or without `-O0`, both gave the same results.
-
-## Test C programs
-
-They are located in `./tests` directory, all from the [TheAlgorithms/C](https://github.com/TheAlgorithms/C) repository, and are real-world programs, each program is around 700 lines.
-
-Please note that they require C standard of at least C99.
-
-```
-tests
-├── hash_blake2b.c
-├── kohonen_som_topology.c
-├── mcnaughton_yamada_thompson.c
-└── red_black_tree.c
-```
-
-## Valgrind instruction count
-
-See `./branch`
-
-> [!TIP]
-> For a quick demo that automatically builds the tool and run instruction count instrumentation on `date` binary, run
-> `./scripts/valgrind-instruction-count-demo.sh`
-
-### Building
-
+### Test Output
+Output for example 1
 ```bash
-# get valgrind source if you haven't already
-git clone https://sourceware.org/git/valgrind.git && cd valgrind
-
-# copy `./branch` dir, ./valgrind-extra/* to `valgrind` dir
-# cp -vr "$REPO_ROOT/branch" .
-# VALGRIND_EXTRA_DIR="$REPO_ROOT/valgrind-extra"
-# cp -vf "$VALGRIND_EXTRA_DIR/configure.ac" .
-# cp -vf "$VALGRIND_EXTRA_DIR/Makefile.am" .
-
-
-# then run these from the root of the valgrind dir
-./autogen.sh
- ./configure --prefix=`pwd`/inst
- make install
+Seminal Input Feature: Key variable: n, Line: 4
 ```
-
-### Usage
-
+Output for example 2
 ```bash
-# from the root of the valgrind dir
-inst/bin/valgrind --tool=branch date
-# or replace `date` with any executable you compiled
+Seminal Input Feature: Key variable: fp, Line: 5
 ```
 
-### Output
 
-Running on Ubuntu 22.04 on VCL
 
-```
-# ./input is compiled from `inputs/input.c` using g++
-# running from the root of the valgrind dir
-$ inst/bin/valgrind --tool=branch ./input
-
-==2502571== Branch, a binary profiling tool to count instructions
-==2502571== Copyright (C) 2002-2017, and GNU GPL'd, by Teddy Xinyuan Chen
-==2502571== Using Valgrind-3.23.0.GIT and LibVEX; rerun with -h for copyright info
-==2502571== Command: ./input
-==2502571== 
-Foo: 0
-Bar: 1
-Foo: 2
-Bar: 3
-==2502571== 
-==2502571== Total number of executed instructions: 138983
-```
