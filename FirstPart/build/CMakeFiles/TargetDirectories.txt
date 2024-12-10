@@ -1,0 +1,9 @@
+/home/zshiraz/part1-dev/build/CMakeFiles/intrinsics_gen.dir
+/home/zshiraz/part1-dev/build/CMakeFiles/omp_gen.dir
+/home/zshiraz/part1-dev/build/CMakeFiles/acc_gen.dir
+/home/zshiraz/part1-dev/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/zshiraz/part1-dev/build/CMakeFiles/edit_cache.dir
+/home/zshiraz/part1-dev/build/CMakeFiles/rebuild_cache.dir
+/home/zshiraz/part1-dev/build/BranchPointerPass/CMakeFiles/BranchPointerPass.dir
+/home/zshiraz/part1-dev/build/BranchPointerPass/CMakeFiles/edit_cache.dir
+/home/zshiraz/part1-dev/build/BranchPointerPass/CMakeFiles/rebuild_cache.dir
