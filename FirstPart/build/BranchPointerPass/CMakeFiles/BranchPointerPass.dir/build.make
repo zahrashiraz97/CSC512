@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zshiraz/part1-dev
+CMAKE_SOURCE_DIR = /home/zshiraz/CSC512/FirstPart
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zshiraz/part1-dev/build
+CMAKE_BINARY_DIR = /home/zshiraz/CSC512/FirstPart/build
 
 # Include any dependencies generated for this target.
 include BranchPointerPass/CMakeFiles/BranchPointerPass.dir/depend.make
@@ -72,16 +72,16 @@ include BranchPointerPass/CMakeFiles/BranchPointerPass.dir/flags.make
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o: BranchPointerPass/CMakeFiles/BranchPointerPass.dir/flags.make
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o: ../BranchPointerPass/BranchPointerPass.cpp
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o: BranchPointerPass/CMakeFiles/BranchPointerPass.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zshiraz/part1-dev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o"
-	cd /home/zshiraz/part1-dev/build/BranchPointerPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o -MF CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o.d -o CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o -c /home/zshiraz/part1-dev/BranchPointerPass/BranchPointerPass.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zshiraz/CSC512/FirstPart/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o"
+	cd /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o -MF CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o.d -o CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o -c /home/zshiraz/CSC512/FirstPart/BranchPointerPass/BranchPointerPass.cpp
 
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.i"
-	cd /home/zshiraz/part1-dev/build/BranchPointerPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zshiraz/part1-dev/BranchPointerPass/BranchPointerPass.cpp > CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.i
+	cd /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zshiraz/CSC512/FirstPart/BranchPointerPass/BranchPointerPass.cpp > CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.i
 
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.s"
-	cd /home/zshiraz/part1-dev/build/BranchPointerPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zshiraz/part1-dev/BranchPointerPass/BranchPointerPass.cpp -o CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.s
+	cd /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zshiraz/CSC512/FirstPart/BranchPointerPass/BranchPointerPass.cpp -o CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.s
 
 # Object files for target BranchPointerPass
 BranchPointerPass_OBJECTS = \
@@ -94,18 +94,18 @@ BranchPointerPass/libBranchPointerPass.so: BranchPointerPass/CMakeFiles/BranchPo
 BranchPointerPass/libBranchPointerPass.so: BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make
 BranchPointerPass/libBranchPointerPass.so: /usr/lib/llvm-17/lib/libLLVM-17.so.1
 BranchPointerPass/libBranchPointerPass.so: BranchPointerPass/CMakeFiles/BranchPointerPass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zshiraz/part1-dev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libBranchPointerPass.so"
-	cd /home/zshiraz/part1-dev/build/BranchPointerPass && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BranchPointerPass.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zshiraz/CSC512/FirstPart/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libBranchPointerPass.so"
+	cd /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BranchPointerPass.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build: BranchPointerPass/libBranchPointerPass.so
 .PHONY : BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build
 
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/clean:
-	cd /home/zshiraz/part1-dev/build/BranchPointerPass && $(CMAKE_COMMAND) -P CMakeFiles/BranchPointerPass.dir/cmake_clean.cmake
+	cd /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass && $(CMAKE_COMMAND) -P CMakeFiles/BranchPointerPass.dir/cmake_clean.cmake
 .PHONY : BranchPointerPass/CMakeFiles/BranchPointerPass.dir/clean
 
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/depend:
-	cd /home/zshiraz/part1-dev/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zshiraz/part1-dev /home/zshiraz/part1-dev/BranchPointerPass /home/zshiraz/part1-dev/build /home/zshiraz/part1-dev/build/BranchPointerPass /home/zshiraz/part1-dev/build/BranchPointerPass/CMakeFiles/BranchPointerPass.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zshiraz/CSC512/FirstPart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zshiraz/CSC512/FirstPart /home/zshiraz/CSC512/FirstPart/BranchPointerPass /home/zshiraz/CSC512/FirstPart/build /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass/CMakeFiles/BranchPointerPass.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : BranchPointerPass/CMakeFiles/BranchPointerPass.dir/depend
 

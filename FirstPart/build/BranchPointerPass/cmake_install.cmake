@@ -1,4 +1,4 @@
-# Install script for directory: /home/zshiraz/part1-dev/BranchPointerPass
+# Install script for directory: /home/zshiraz/CSC512/FirstPart/BranchPointerPass
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

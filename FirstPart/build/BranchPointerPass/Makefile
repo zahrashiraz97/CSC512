@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zshiraz/part1-dev
+CMAKE_SOURCE_DIR = /home/zshiraz/CSC512/FirstPart
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zshiraz/part1-dev/build
+CMAKE_BINARY_DIR = /home/zshiraz/CSC512/FirstPart/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/zshiraz/part1-dev/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/zshiraz/part1-dev/build/CMakeFiles /home/zshiraz/part1-dev/build/BranchPointerPass//CMakeFiles/progress.marks
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zshiraz/part1-dev/build/CMakeFiles 0
+	cd /home/zshiraz/CSC512/FirstPart/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/zshiraz/CSC512/FirstPart/build/CMakeFiles /home/zshiraz/CSC512/FirstPart/build/BranchPointerPass//CMakeFiles/progress.marks
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zshiraz/CSC512/FirstPart/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/clean
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/preinstall
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/preinstall
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/zshiraz/part1-dev/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/zshiraz/CSC512/FirstPart/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/rule:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/rule
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/rule
 .PHONY : BranchPointerPass/CMakeFiles/BranchPointerPass.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ BranchPointerPass: BranchPointerPass/CMakeFiles/BranchPointerPass.dir/rule
 
 # fast build rule for target.
 BranchPointerPass/fast:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build
 .PHONY : BranchPointerPass/fast
 
 BranchPointerPass.o: BranchPointerPass.cpp.o
@@ -135,7 +135,7 @@ BranchPointerPass.o: BranchPointerPass.cpp.o
 
 # target to build an object file
 BranchPointerPass.cpp.o:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o
 .PHONY : BranchPointerPass.cpp.o
 
 BranchPointerPass.i: BranchPointerPass.cpp.i
@@ -143,7 +143,7 @@ BranchPointerPass.i: BranchPointerPass.cpp.i
 
 # target to preprocess a source file
 BranchPointerPass.cpp.i:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.i
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.i
 .PHONY : BranchPointerPass.cpp.i
 
 BranchPointerPass.s: BranchPointerPass.cpp.s
@@ -151,7 +151,7 @@ BranchPointerPass.s: BranchPointerPass.cpp.s
 
 # target to generate assembly for a file
 BranchPointerPass.cpp.s:
-	cd /home/zshiraz/part1-dev/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.s
+	cd /home/zshiraz/CSC512/FirstPart/build && $(MAKE) $(MAKESILENT) -f BranchPointerPass/CMakeFiles/BranchPointerPass.dir/build.make BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.s
 .PHONY : BranchPointerPass.cpp.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/zshiraz/part1-dev/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/zshiraz/CSC512/FirstPart/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

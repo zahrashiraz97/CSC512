@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zshiraz/part1-dev
+CMAKE_SOURCE_DIR = /home/zshiraz/CSC512/FirstPart
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zshiraz/part1-dev/build
+CMAKE_BINARY_DIR = /home/zshiraz/CSC512/FirstPart/build
 
 # Utility rule file for RISCVTargetParserTableGen.
 
@@ -78,6 +78,6 @@ CMakeFiles/RISCVTargetParserTableGen.dir/clean:
 .PHONY : CMakeFiles/RISCVTargetParserTableGen.dir/clean
 
 CMakeFiles/RISCVTargetParserTableGen.dir/depend:
-	cd /home/zshiraz/part1-dev/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zshiraz/part1-dev /home/zshiraz/part1-dev /home/zshiraz/part1-dev/build /home/zshiraz/part1-dev/build /home/zshiraz/part1-dev/build/CMakeFiles/RISCVTargetParserTableGen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/zshiraz/CSC512/FirstPart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zshiraz/CSC512/FirstPart /home/zshiraz/CSC512/FirstPart /home/zshiraz/CSC512/FirstPart/build /home/zshiraz/CSC512/FirstPart/build /home/zshiraz/CSC512/FirstPart/build/CMakeFiles/RISCVTargetParserTableGen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RISCVTargetParserTableGen.dir/depend
 

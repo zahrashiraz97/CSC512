@@ -1,5 +1,5 @@
 BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o: \
- /home/zshiraz/part1-dev/BranchPointerPass/BranchPointerPass.cpp \
+ /home/zshiraz/CSC512/FirstPart/BranchPointerPass/BranchPointerPass.cpp \
  /usr/include/stdc-predef.h \
  /usr/include/llvm-17/llvm/IR/DebugInfoMetadata.h \
  /usr/include/llvm-17/llvm/ADT/ArrayRef.h \

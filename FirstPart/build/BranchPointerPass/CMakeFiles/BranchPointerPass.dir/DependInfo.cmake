@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/zshiraz/part1-dev/BranchPointerPass/BranchPointerPass.cpp" "BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o" "gcc" "BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o.d"
+  "/home/zshiraz/CSC512/FirstPart/BranchPointerPass/BranchPointerPass.cpp" "BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o" "gcc" "BranchPointerPass/CMakeFiles/BranchPointerPass.dir/BranchPointerPass.cpp.o.d"
   )
 
 # Targets to which this target links.
