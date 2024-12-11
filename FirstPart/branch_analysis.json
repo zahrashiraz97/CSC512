@@ -1,20 +1,632 @@
 [
     {
         "branch_id": 1,
-        "destination_line": 15,
-        "file_path": "/home/zshiraz/part1-dev/inputs/input.c",
-        "source_line": 14
+        "destination_line": 46,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 46
     },
     {
         "branch_id": 2,
-        "destination_line": 18,
-        "file_path": "/home/zshiraz/part1-dev/inputs/input.c",
-        "source_line": 18
+        "destination_line": 43,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 75
     },
     {
         "branch_id": 3,
-        "destination_line": 19,
-        "file_path": "/home/zshiraz/part1-dev/inputs/input.c",
-        "source_line": 18
+        "destination_line": 229,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 228
+    },
+    {
+        "branch_id": 4,
+        "destination_line": 229,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 228
+    },
+    {
+        "branch_id": 5,
+        "destination_line": 233,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 232
+    },
+    {
+        "branch_id": 6,
+        "destination_line": 237,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 236
+    },
+    {
+        "branch_id": 7,
+        "destination_line": 237,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 236
+    },
+    {
+        "branch_id": 8,
+        "destination_line": 237,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 236
+    },
+    {
+        "branch_id": 9,
+        "destination_line": 336,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 336
+    },
+    {
+        "branch_id": 10,
+        "destination_line": 338,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 336
+    },
+    {
+        "branch_id": 11,
+        "destination_line": 338,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 338
+    },
+    {
+        "branch_id": 12,
+        "destination_line": 339,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 338
+    },
+    {
+        "branch_id": 13,
+        "destination_line": 341,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 338
+    },
+    {
+        "branch_id": 14,
+        "destination_line": 344,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 344
+    },
+    {
+        "branch_id": 15,
+        "destination_line": 345,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 344
+    },
+    {
+        "branch_id": 16,
+        "destination_line": 347,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 344
+    },
+    {
+        "branch_id": 17,
+        "destination_line": 350,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 350
+    },
+    {
+        "branch_id": 18,
+        "destination_line": 352,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 350
+    },
+    {
+        "branch_id": 19,
+        "destination_line": 352,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 352
+    },
+    {
+        "branch_id": 20,
+        "destination_line": 353,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 352
+    },
+    {
+        "branch_id": 21,
+        "destination_line": 355,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 352
+    },
+    {
+        "branch_id": 22,
+        "destination_line": 358,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 358
+    },
+    {
+        "branch_id": 23,
+        "destination_line": 359,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 358
+    },
+    {
+        "branch_id": 24,
+        "destination_line": 361,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 358
+    },
+    {
+        "branch_id": 25,
+        "destination_line": 364,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 364
+    },
+    {
+        "branch_id": 26,
+        "destination_line": 366,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 364
+    },
+    {
+        "branch_id": 27,
+        "destination_line": 366,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 366
+    },
+    {
+        "branch_id": 28,
+        "destination_line": 367,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 366
+    },
+    {
+        "branch_id": 29,
+        "destination_line": 369,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 366
+    },
+    {
+        "branch_id": 30,
+        "destination_line": 372,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 372
+    },
+    {
+        "branch_id": 31,
+        "destination_line": 373,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 372
+    },
+    {
+        "branch_id": 32,
+        "destination_line": 375,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 372
+    },
+    {
+        "branch_id": 33,
+        "destination_line": 378,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 378
+    },
+    {
+        "branch_id": 34,
+        "destination_line": 380,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 378
+    },
+    {
+        "branch_id": 35,
+        "destination_line": 380,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 380
+    },
+    {
+        "branch_id": 36,
+        "destination_line": 381,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 380
+    },
+    {
+        "branch_id": 37,
+        "destination_line": 383,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 380
+    },
+    {
+        "branch_id": 38,
+        "destination_line": 386,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 386
+    },
+    {
+        "branch_id": 39,
+        "destination_line": 387,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 386
+    },
+    {
+        "branch_id": 40,
+        "destination_line": 389,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 386
+    },
+    {
+        "branch_id": 41,
+        "destination_line": 392,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 392
+    },
+    {
+        "branch_id": 42,
+        "destination_line": 394,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 392
+    },
+    {
+        "branch_id": 43,
+        "destination_line": 394,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 394
+    },
+    {
+        "branch_id": 44,
+        "destination_line": 395,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 394
+    },
+    {
+        "branch_id": 45,
+        "destination_line": 397,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 394
+    },
+    {
+        "branch_id": 46,
+        "destination_line": 400,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 400
+    },
+    {
+        "branch_id": 47,
+        "destination_line": 401,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 400
+    },
+    {
+        "branch_id": 48,
+        "destination_line": 403,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 400
+    },
+    {
+        "branch_id": 49,
+        "destination_line": 406,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 406
+    },
+    {
+        "branch_id": 50,
+        "destination_line": 408,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 406
+    },
+    {
+        "branch_id": 51,
+        "destination_line": 408,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 408
+    },
+    {
+        "branch_id": 52,
+        "destination_line": 409,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 408
+    },
+    {
+        "branch_id": 53,
+        "destination_line": 411,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 408
+    },
+    {
+        "branch_id": 54,
+        "destination_line": 414,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 414
+    },
+    {
+        "branch_id": 55,
+        "destination_line": 415,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 414
+    },
+    {
+        "branch_id": 56,
+        "destination_line": 417,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 414
+    },
+    {
+        "branch_id": 57,
+        "destination_line": 420,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 420
+    },
+    {
+        "branch_id": 58,
+        "destination_line": 422,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 420
+    },
+    {
+        "branch_id": 59,
+        "destination_line": 422,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 422
+    },
+    {
+        "branch_id": 60,
+        "destination_line": 423,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 422
+    },
+    {
+        "branch_id": 61,
+        "destination_line": 425,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 422
+    },
+    {
+        "branch_id": 62,
+        "destination_line": 428,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 428
+    },
+    {
+        "branch_id": 63,
+        "destination_line": 429,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 428
+    },
+    {
+        "branch_id": 64,
+        "destination_line": 431,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 428
+    },
+    {
+        "branch_id": 65,
+        "destination_line": 434,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 434
+    },
+    {
+        "branch_id": 66,
+        "destination_line": 436,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 434
+    },
+    {
+        "branch_id": 67,
+        "destination_line": 436,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 436
+    },
+    {
+        "branch_id": 68,
+        "destination_line": 437,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 436
+    },
+    {
+        "branch_id": 69,
+        "destination_line": 439,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 436
+    },
+    {
+        "branch_id": 70,
+        "destination_line": 442,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 442
+    },
+    {
+        "branch_id": 71,
+        "destination_line": 443,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 442
+    },
+    {
+        "branch_id": 72,
+        "destination_line": 445,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 442
+    },
+    {
+        "branch_id": 73,
+        "destination_line": 93,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 91
+    },
+    {
+        "branch_id": 74,
+        "destination_line": 95,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 93
+    },
+    {
+        "branch_id": 75,
+        "destination_line": 104,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 102
+    },
+    {
+        "branch_id": 76,
+        "destination_line": 112,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 110
+    },
+    {
+        "branch_id": 77,
+        "destination_line": 117,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 115
+    },
+    {
+        "branch_id": 78,
+        "destination_line": 119,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 117
+    },
+    {
+        "branch_id": 79,
+        "destination_line": 131,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 129
+    },
+    {
+        "branch_id": 80,
+        "destination_line": 131,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 129
+    },
+    {
+        "branch_id": 81,
+        "destination_line": 133,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 131
+    },
+    {
+        "branch_id": 82,
+        "destination_line": 137,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 135
+    },
+    {
+        "branch_id": 83,
+        "destination_line": 145,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 143
+    },
+    {
+        "branch_id": 84,
+        "destination_line": 258,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 258
+    },
+    {
+        "branch_id": 85,
+        "destination_line": 260,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 258
+    },
+    {
+        "branch_id": 86,
+        "destination_line": 260,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 260
+    },
+    {
+        "branch_id": 87,
+        "destination_line": 262,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 260
+    },
+    {
+        "branch_id": 88,
+        "destination_line": 288,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 286
+    },
+    {
+        "branch_id": 89,
+        "destination_line": 288,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 288
+    },
+    {
+        "branch_id": 90,
+        "destination_line": 290,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 288
+    },
+    {
+        "branch_id": 91,
+        "destination_line": 165,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 163
+    },
+    {
+        "branch_id": 92,
+        "destination_line": 167,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 165
+    },
+    {
+        "branch_id": 93,
+        "destination_line": 175,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 173
+    },
+    {
+        "branch_id": 94,
+        "destination_line": 183,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 181
+    },
+    {
+        "branch_id": 95,
+        "destination_line": 191,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 189
+    },
+    {
+        "branch_id": 96,
+        "destination_line": 193,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 191
+    },
+    {
+        "branch_id": 97,
+        "destination_line": 204,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 202
+    },
+    {
+        "branch_id": 98,
+        "destination_line": 204,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 202
+    },
+    {
+        "branch_id": 99,
+        "destination_line": 206,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 204
+    },
+    {
+        "branch_id": 100,
+        "destination_line": 210,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 208
+    },
+    {
+        "branch_id": 101,
+        "destination_line": 217,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 215
+    },
+    {
+        "branch_id": 102,
+        "destination_line": 309,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 309
+    },
+    {
+        "branch_id": 103,
+        "destination_line": 311,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 309
+    },
+    {
+        "branch_id": 104,
+        "destination_line": 311,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 311
+    },
+    {
+        "branch_id": 105,
+        "destination_line": 313,
+        "file_path": "/home/zshiraz/CSC512_part1_submission/FirstPart/inputs/input.c",
+        "source_line": 311
     }
 ]

@@ -1,0 +1,9 @@
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/CMakeFiles/intrinsics_gen.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/CMakeFiles/omp_gen.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/CMakeFiles/acc_gen.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/CMakeFiles/edit_cache.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/CMakeFiles/rebuild_cache.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/BranchPointerPass/CMakeFiles/BranchPointerPass.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/BranchPointerPass/CMakeFiles/edit_cache.dir
+/home/zshiraz/CSC512_part1_submission/FirstPart/build/BranchPointerPass/CMakeFiles/rebuild_cache.dir
